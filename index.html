@@ -11,34 +11,37 @@
 </head>
 
 <body>
-    <div class="container mt-5 border border-black">
+    <div class="container mt-5 border border-black p-4">
         <div>
             <div class="postcard-footer" style="border: 1px solid grey; background-color: rgb(246, 243, 243);">
-                <h2>Payment form example</h2>
+                <h2 class="mx-auto p-2"> Payment form example </h2>
+
             </div>
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger mt-2" role="alert">
                 A simple danger alert—check it out!
             </div>
             <form class="row">
                 <div class="col-md-6">
                     <label for="Card" class="form-label">Card #</label>
-                    <input type="number" class="form-control" id="Card" maxlength="16" pattern="[0-9\s]{16}">
+                    <input type="number" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" id="Card" maxlength="16"
+                        pattern="[0-9\s]{16}">
                 </div>
                 <div class="col-md-4">
                     <label for="CVC" class="form-label">CVC #</label>
-                    <input type="number" class="form-control" id="CVC" maxlength="3" pattern="[0-9\s]{3}">
+                    <input type="number" class="form-control" placeholder="XXXX" id="CVC" maxlength="3"
+                        pattern="[0-9\s]{3}">
                 </div>
                 <div class="col-md-2">
                     <label for="Amount" class="form-label">Amount</label>
-                    <input type="number" class="form-control" id="Amount">
+                    <input type="number" class="form-control" placeholder="Amount" id="Amount">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">First Name</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="inputFirstName" class="form-label">First Name</label>
+                    <input type="email" class="form-control" id="inputFirstName">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Last Name</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="inputLastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName">
                 </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">Ciudad</label>
@@ -52,53 +55,79 @@
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Código</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="Código" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="Código">
                 </div>
                 <div class="col-md-6">
                     <label>Aceptamos:</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1">1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">2</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1">1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    <div>
+                        <div class="text-bg-secondary p-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/40px-MasterCard_Logo.svg.png">
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/40px-MasterCard_Logo.svg.png">
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option3">
+                                <label class="form-check-label" for="inlineRadio1">
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/40px-MasterCard_Logo.svg.png">
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option4">
+                                <label class="form-check-label" for="inlineRadio2">
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/40px-MasterCard_Logo.svg.png">
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <form>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Mensajes</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="text-tiny">Escribe algo aquí.</div>
+                            <label for="exampleInputMessages" class="form-label">Mensajes</label>
+                            <input type="Mesages" class="form-control" text-area="device-width" id="exampleInputEmail1"
+                                aria-describedby="MesagesHelp">
+                            <div id="MensajesHelp" class="text-tiny" />Escribe algo aquí.
                         </div>
-                    </form>
                 </div>
-
             </form>
         </div>
 
-
-
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
         </form>
     </div>
+
+    <div class="col-12">
+        <div class="container">
+            <div>
+                <div class="postcard-footer" style="background-color: rgb(246, 243, 243); height: 60px;">
+                    <div class="d-flex flex-row-reverse mx-auto p-2">
+                        <div class="grid gap-3">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            </form>
+        </div>
     </div>
 </body>
 
